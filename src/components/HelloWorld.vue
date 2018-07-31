@@ -6,6 +6,16 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank">vue-cli documentation</a>.
     </p>
+    <h3>Installed Blockchain Development Tools</h3>
+    <ul>
+      <li><a href="https://github.com/nemtech/nem2-sdk-typescript-javascript" target="_blank">Nem2-Typescript-SDK</a></li>
+      <li><a href="https://github.com/luxtagofficial/Apostille-library" target="_blank">Apostille-Library</a></li>
+      <li><a href="https://github.com/QuantumMechanics/NEM-sdk" target="_blank">NEM-SDK</a></li>
+      <li><a href="https://github.com/brix/crypto-js" target="_blank">Crypto-js</a></li>
+      <li><a href="https://github.com/emn178/js-sha3" target="_blank">js-sha3</a></li>
+      <li><a href="https://github.com/lodash/lodash" target="_blank">Loadash</a></li>
+      <li><a href="https://github.com/ReactiveX/rxjs" target="_blank">Rxjs</a></li>
+    </ul>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank">babel</a></li>
@@ -14,7 +24,7 @@
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest" target="_blank">unit-jest</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-e2e-cypress" target="_blank">e2e-cypress</a></li>
     </ul>
-    <h3>Essential Links</h3>
+    <h3>Essential Vue Links</h3>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>

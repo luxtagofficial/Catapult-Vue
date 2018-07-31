@@ -1,16 +1,40 @@
 {
-  "name": "Catapult-vue",
+  "name": "catapult-vue",
   "version": "0.1.0",
-  "private": true,
+  "description": "An opiniated Blockchain starter kit for vuejs",
+  "keywords": [
+    "blockchain",
+    "nem",
+    "notarization",
+    "poe",
+    "vue"
+  ],
   "scripts": {
+    "commit": "git-cz",
     "serve": "vue-cli-service serve",
+    "prebuild": "rimraf dist",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:unit": "vue-cli-service test:unit --coverage --verbose",
+    "test:e2e": "vue-cli-service test:e2e",
+    "validate": "npm-run-all --parallel lint test:unit",
+    "report-coverage": "cat ./tests/unit/coverage/lcov.info | codecov",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
+  "author": "gimyboya <amine@luxtag.io>",
   "dependencies": {
+    "@types/crypto-js": "^3.1.43",
+    "@types/es6-promise": "^3.3.0",
+    "@types/lodash": "^4.14.115",
+    "apostille-library": "^5.0.0",
+    "crypto-js": "^3.1.9-1",
+    "js-sha3": "^0.7.0",
+    "lodash": "^4.17.10",
+    "nem-sdk": "^1.6.7",
+    "nem2-sdk": "^0.10.1",
     "register-service-worker": "^1.0.0",
+    "rxjs": "^6.2.2",
     "vue": "^2.5.16",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
@@ -19,6 +43,7 @@
   },
   "devDependencies": {
     "@types/jest": "^23.1.4",
+    "@types/sinon": "^5.0.1",
     "@vue/cli-plugin-babel": "^3.0.0-rc.5",
     "@vue/cli-plugin-e2e-cypress": "^3.0.0-rc.5",
     "@vue/cli-plugin-pwa": "^3.0.0-rc.5",
@@ -27,9 +52,32 @@
     "@vue/cli-service": "^3.0.0-rc.5",
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
+    "codecov": "^3.0.4",
+    "commitizen": "^2.10.1",
+    "commitlint": "^7.0.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "ghooks": "^2.0.4",
     "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3",
+    "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
+    "semantic-release": "^15.9.1",
+    "sinon": "^6.1.4",
+    "travis-deploy-once": "^5.0.1",
     "ts-jest": "^23.0.0",
+    "validate-commit-msg": "^2.14.0",
     "vue-template-compiler": "^2.5.16"
+  },
+  "files": [
+    "dist"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run validate",
+      "commit-msg": "validate-commit-msg"
+    }
   }
 }
