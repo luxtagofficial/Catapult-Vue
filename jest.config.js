@@ -1,4 +1,7 @@
 module.exports = {
+  transformIgnorePatterns: [
+    '<rootDir>/node_modules/'
+  ],
   moduleFileExtensions: [
     'ts',
     'tsx',
@@ -10,7 +13,8 @@ module.exports = {
   transform: {
     '^.+\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
-    '^.+\\.tsx?$': 'ts-jest'
+    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.(js|jsx)?$': 'babel-jest'
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
@@ -27,5 +31,6 @@ module.exports = {
   ],
   coveragePathIgnorePatterns: [
     '/types/'
-  ]
+  ],
+  testURL: 'http://localhost'
 }
