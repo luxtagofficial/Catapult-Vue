@@ -3257,12 +3257,12 @@ declare const nem_sdk: {
                         signedVersion: string;
                         version: string;
                     };
-                    "SHA3-256": {
+                    'SHA3-256': {
                         name: string;
                         signedVersion: string;
                         version: string;
                     };
-                    "SHA3-512": {
+                    'SHA3-512': {
                         name: string;
                         signedVersion: string;
                         version: string;
@@ -3312,32 +3312,32 @@ declare const nem_sdk: {
                 defaultMijin: string;
                 defaultPort: number;
                 defaultTestnet: string;
-                mainnet: {
+                mainnet: Array<{
                     uri: string;
-                }[];
+                }>;
                 mainnetExplorer: string;
                 marketInfo: string;
-                mijin: {
+                mijin: Array<{
                     uri: string;
-                }[];
+                }>;
                 mijinExplorer: string;
                 mijinPort: number;
-                searchOnMainnet: {
+                searchOnMainnet: Array<{
                     location: string;
                     uri: string;
-                }[];
-                searchOnMijin: {
+                }>;
+                searchOnMijin: Array<{
                     location: string;
                     uri: string;
-                }[];
-                searchOnTestnet: {
+                }>;
+                searchOnTestnet: Array<{
                     location: string;
                     uri: string;
-                }[];
+                }>;
                 supernodes: string;
-                testnet: {
+                testnet: Array<{
                     uri: string;
-                }[];
+                }>;
                 testnetExplorer: string;
                 websocketPort: number;
             };
@@ -3347,19 +3347,19 @@ declare const nem_sdk: {
             };
             sinks: {
                 apostille: {
-                    "-104": string;
-                    "104": string;
-                    "96": string;
+                    '-104': string;
+                    '104': string;
+                    '96': string;
                 };
                 mosaic: {
-                    "-104": string;
-                    "104": string;
-                    "96": string;
+                    '-104': string;
+                    '104': string;
+                    '96': string;
                 };
                 namespace: {
-                    "-104": string;
-                    "104": string;
-                    "96": string;
+                    '-104': string;
+                    '104': string;
+                    '96': string;
                 };
             };
             transactionTypes: {

@@ -15,7 +15,7 @@ An opininated blockchain starter kit for vue.
 You can use this repo by cloning it to your local machine in a new folder as follow
 ```bash
 git init
-git clone https://github.com/luxtagofficial/Typescript-Catapult.git
+git clone https://github.com/luxtagofficial/Catapult-Vue.git
 ```
 Once done you need to point the remote origin to your own git repository
 ```bash
